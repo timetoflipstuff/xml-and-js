@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person>
+    <firstName>Aleksandr</firstName>
+    <lastName>Mikhailov</lastName>
+    <dateOfBirth>21 March 1997</dateOfBirth>
+    <hobbies type="array">
+        <value>Music</value>
+        <value>Programming</value>
+        <value>Gaming</value>
+    </hobbies>
+</person>
