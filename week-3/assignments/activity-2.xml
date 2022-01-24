@@ -1,0 +1,22 @@
+<employeeList xmlns="corp:employeeList" xmlns:dept="corp:dept">
+  <personList>
+    <empID>E0000001</empID>
+    <dept:name>Sales</dept:name>
+    <name>John Smith</name>
+  </personList>
+  <personList>
+    <empID>E0000002</empID>
+    <dept:name>Development</dept:name>
+    <name>Ichiro Tanaka</name>
+  </personList>
+  <personList>
+    <empID>E0000003</empID>
+    <dept:name>Development</dept:name>
+    <name>Jiro Suzuki</name>
+  </personList>
+  <personList>
+    <empID>E0000004</empID>
+    <dept:name>Administrative</dept:name>
+    <name>Saburo Takahashi</name>
+  </personList>
+</employeeList>
