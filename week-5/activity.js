@@ -1,0 +1,1 @@
+document.getElementById("submitButton").onclick = () => console.log("The form has been submitted");
