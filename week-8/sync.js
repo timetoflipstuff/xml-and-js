@@ -1,22 +1,19 @@
-function inc(a) {
-  return a + 1;
-}
+const wait = ms => new Promise(function (resolve) {
+    setTimeout(resolve, ms)
+});
 
-const sum = function (a, b) {
-  return a + b;
-};
+const inc = (a) => wait(3000).then(() => a + 1);
 
-const max = (a, b) => (a > b ? a : b);
+const sum = (a, b) => wait(3000).then(() => a + b);
 
-const avg = (a, b) => {
-  const s = sum(a, b);
-  return s / 2;
-};
+const max = (a, b) => wait(3000).then(() => a > b ? a : b);
+
+const avg = (a, b) => wait(3000).then(() => sum(a, b)).then(s => s / 2);
 
 const obj = {
   name: "Marcus Aurelius",
   split(sep = " ") {
-    return this.name.split(sep);
+    return wait(3000).then(() => this.name.split(sep));
   },
 };
 
@@ -30,15 +27,22 @@ class Person {
   }
 
   split(sep = " ") {
-    return this.name.split(sep);
+    return wait(3000).then(() => this.name.split(sep));
   }
 }
 
 const person = Person.of("Marcus Aurelius");
 
-console.log("inc(5) =", inc(5));
-console.log("sum(1, 3) =", sum(1, 3));
-console.log("max(8, 6) =", max(8, 6));
-console.log("avg(8, 6) =", avg(8, 6));
-console.log("obj.split() =", obj.split());
-console.log("person.split() =", person.split());
+function doLogs() {
+  Promise.all([inc(5), sum(1, 3), max(8, 6), avg(8, 6), obj.split(), person.split()])
+  .then(values => {
+    console.log("inc(5) =", values[0]);
+    console.log("sum(1, 3) =", values[1]);
+    console.log("max(8, 6) =", values[2]);
+    console.log("avg(8, 6) =", values[3]);
+    console.log("obj.split() =", values[4]);
+    console.log("person.split() =", values[5]);
+  });
+}
+
+doLogs();
