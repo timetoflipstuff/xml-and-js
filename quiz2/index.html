@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2 Form</title>
+</head>
+<body>
+    <h1>HTML Form</h1>
+    <br>
+    <form>
+        <label for="firstfield">Text field:</label>
+        <input type="text" id="firstfield" name="firstfield" placeholder="Enter value...">
+        <br><br>
+        <label for="dropdown">Dropdown:</label>
+        <select name="dropdown" id="dropdown">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+        </select>
+        <br><br>
+        <fieldset>  
+            <legend>Checkboxes</legend>  
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br> 
+        </fieldset>
+        <br>
+        <fieldset>  
+            <legend>Radio buttons</legend>  
+            <input type="radio" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="radio" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="radio" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label><br> 
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="button" value="Cancel">
+    </form>
+
+</body>
+</html>
