@@ -21,12 +21,6 @@ const generateHtmlRow = (row) => {
     `<td>${row.ip_address}</td></tr>`
 }
 
-const htmlToElement = html => {
-    const template = document.createElement("template");
-    template.innerHTML = html;
-    return template.content;
-};
-
 const renderTable = (data, terms) => {
     let resultingTable = data;
     if (terms) {

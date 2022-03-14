@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form onsubmit="onSubmit(event)" onreset="onReset()">
+        <input type="text" name="name" id="name-filter" placeholder="Filter by name..."/>
+        <button type="submit">Apply</button>
+        <button type="reset">Reset</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <td><p>ID</p></td>
+                <td><p>Name</p></td>
+                <td><p>Email</p></td>
+                <td><p>Gender</p></td>
+                <td><p>IP Address</p></td>
+            </tr>
+        </thead>
+        <tbody id="generated-content"></tbody>
+    </table>
+    <script src="assignment.js"></script>
+</body>
+</html>
