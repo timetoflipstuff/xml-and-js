@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Project 2</title>
+  </head>
+  <body>
+    <h3>Cars</h3>
+    <form>
+      <input type="text" name="id" id="input-id" placeholder="ID"/>
+      <input type="text" name="make" id="input-make" placeholder="make"/>
+      <input type="text" name="model" id="input-model" placeholder="model"/>
+      <input type="text" name="year" id="input-year" placeholder="year"/>
+      <button type="submit">Apply filters</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
